@@ -1506,7 +1506,7 @@ do
 
 			fontSize = addon.db.profile.tooltip.acquire_fontsize + textSize
 
-			fontObj:SetFont(font, fontSize)
+			fontObj:SetFont(font, fontSize, "OUTLINE")
 			acquire_tip:SetFont(fontObj)
 		end
 
@@ -1845,7 +1845,7 @@ do
 		acquire_tip:Clear()
 		acquire_tip:SetScale(addon.db.profile.tooltip.scale)
 		acquire_tip:AddHeader()
-		acquire_tip:SetCell(1, 1, quality_color..recipe.name, "CENTER", 2)
+		acquire_tip:SetCell(1, 1, "|c"..quality_color..recipe.name.."|r", "CENTER", 2)
 
 		-- check if the recipe is excluded
 		if addon.db.profile.exclusionlist[recipe_id] then
