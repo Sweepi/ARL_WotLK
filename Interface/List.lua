@@ -1716,7 +1716,7 @@ do
 			_, _, _, item_level = GetItemInfo(item_id)
 		end
 		local _, _, _, quality_color = GetItemQualityColor(private.recipe_list[recipe_id].quality)
-		local type_color = string.gsub(quality_color, "|cff", "")
+		local type_color = string.sub(quality_color, 3)
 		-- print(type_color)
 
 		if type(id_num) == "string" then
